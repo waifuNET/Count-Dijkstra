@@ -61,11 +61,23 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveLoad.cs" />
+    <Compile Include="windows\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="windows\dialoge.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="windows\dialoge.Designer.cs">
       <DependentUpon>dialoge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="windows\Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="windows\Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
     </Compile>
     <Compile Include="windows\SelectProject.cs">
       <SubType>Form</SubType>
@@ -86,8 +98,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="windows\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="windows\dialoge.resx">
       <DependentUpon>dialoge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="windows\Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="windows\SelectProject.resx">
       <DependentUpon>SelectProject.cs</DependentUpon>

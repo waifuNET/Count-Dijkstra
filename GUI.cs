@@ -178,7 +178,8 @@ namespace graphWF
                                 {
                                     form.type = "int";
                                     form.maxlen = 9;
-                                    form.default_rich = ((int)Math.Sqrt(Math.Pow(GDEXControl.GetVertex(Temp.ver2).button.Location.X - GDEXControl.GetVertex(Temp.ver1).button.Location.X, 2) + Math.Pow(GDEXControl.GetVertex(Temp.ver2).button.Location.Y - GDEXControl.GetVertex(Temp.ver1).button.Location.Y, 2)) / 4).ToString();
+                                    form.default_rich = ((int)Math.Sqrt(Math.Pow(GDEXControl.GetVertex(Temp.ver2).button.Location.X - GDEXControl.GetVertex(Temp.ver1).button.Location.X, 2) +
+                                        Math.Pow(GDEXControl.GetVertex(Temp.ver2).button.Location.Y - GDEXControl.GetVertex(Temp.ver1).button.Location.Y, 2)) / 4).ToString();
                                     form.Text = "Введите цену ребра " + Temp.ver1 + " => " + Temp.ver2;
                                     DialogResult result = form.ShowDialog();
                                     if (result == DialogResult.OK)
@@ -187,22 +188,7 @@ namespace graphWF
                                         if (Int32.TryParse(form.value, out int res))
                                             price = res;
 
-                                        Label label = new Label();
-                                        label.Text = price.ToString();
-                                        label.BackColor = Color.Black;
-                                        label.ForeColor = Color.White;
-                                        label.Font = new Font(label.Font.Name, 14);
-                                        label.AutoSize = true;
-
-                                        label.Location = new Point((Temp.start.X + Temp.stop.X) / 2, (Temp.start.Y + Temp.stop.Y) / 2);
-
-                                        Program.form1.Invoke(new Action(() =>
-                                        {
-                                        //Program.form1.panel1.Controls.Add(label);
-                                    }));
-
-                                        GDEXControl.addEdge(Temp.ver1, Temp.ver2, price, label);
-                                        //labelList.Add(label);
+                                        GDEXControl.addEdge(Temp.ver1, Temp.ver2, price, null);
 
                                         UpdateGUI();
                                     }

@@ -123,14 +123,6 @@ namespace graphWF
                 dex.mathVertexPrice(ver1, ver2);
                 dex.printPath(ver1, ver2);
 
-                //string temp = "";
-                //for (int i = 0; i < dex.pathVertexes.Count; i++)
-                //{
-                //    temp += dex.pathVertexes[i] + "\n";
-                //}
-
-                //MessageBox.Show(temp);
-
                 GUI.UpdateGUI();
             }
         }

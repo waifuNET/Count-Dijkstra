@@ -126,5 +126,17 @@ namespace graphWF
                 ssToolStripMenuItem.Checked = true;
             }
         }
+
+        private void документацияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Information inf = new Information();
+            inf.Show();
+        }
+
+        private void обПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.Show();
+        }
     }
 }

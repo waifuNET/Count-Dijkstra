@@ -38,14 +38,17 @@ namespace graphWF
             this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поискПутиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поискПутиToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ssToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.найтиПутьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вершинуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.весьГрафToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.ssToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.инфоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.документацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.обПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +79,8 @@ namespace graphWF
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
-            this.поискПутиToolStripMenuItem});
+            this.поискПутиToolStripMenuItem,
+            this.инфоToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -131,13 +135,24 @@ namespace graphWF
             this.toolStripTextBox2,
             this.найтиПутьToolStripMenuItem});
             this.поискПутиToolStripMenuItem1.Name = "поискПутиToolStripMenuItem1";
-            this.поискПутиToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.поискПутиToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.поискПутиToolStripMenuItem1.Text = "Поиск пути";
             this.поискПутиToolStripMenuItem1.Click += new System.EventHandler(this.поискПутиToolStripMenuItem1_Click);
             // 
+            // ssToolStripMenuItem
+            // 
+            this.ssToolStripMenuItem.Name = "ssToolStripMenuItem";
+            this.ssToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.ssToolStripMenuItem.Text = "Поиск через кнопки";
+            this.ssToolStripMenuItem.Click += new System.EventHandler(this.ssToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(183, 6);
+            // 
             // toolStripTextBox1
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
             this.toolStripTextBox1.Text = "Откуда";
@@ -146,7 +161,6 @@ namespace graphWF
             // 
             // toolStripTextBox2
             // 
-            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(100, 23);
             this.toolStripTextBox2.Text = "Куда";
@@ -156,7 +170,7 @@ namespace graphWF
             // найтиПутьToolStripMenuItem
             // 
             this.найтиПутьToolStripMenuItem.Name = "найтиПутьToolStripMenuItem";
-            this.найтиПутьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.найтиПутьToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.найтиПутьToolStripMenuItem.Text = "        Найти путь";
             this.найтиПутьToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.найтиПутьToolStripMenuItem.Click += new System.EventHandler(this.найтиПутьToolStripMenuItem_Click);
@@ -167,7 +181,7 @@ namespace graphWF
             this.вершинуToolStripMenuItem,
             this.весьГрафToolStripMenuItem});
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             // 
             // вершинуToolStripMenuItem
@@ -184,17 +198,28 @@ namespace graphWF
             this.весьГрафToolStripMenuItem.Text = "Весь граф";
             this.весьГрафToolStripMenuItem.Click += new System.EventHandler(this.весьГрафToolStripMenuItem_Click);
             // 
-            // toolStripSeparator1
+            // инфоToolStripMenuItem
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(183, 6);
+            this.инфоToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.документацияToolStripMenuItem,
+            this.обПрограммеToolStripMenuItem});
+            this.инфоToolStripMenuItem.Name = "инфоToolStripMenuItem";
+            this.инфоToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.инфоToolStripMenuItem.Text = "Инфо";
             // 
-            // ssToolStripMenuItem
+            // документацияToolStripMenuItem
             // 
-            this.ssToolStripMenuItem.Name = "ssToolStripMenuItem";
-            this.ssToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.ssToolStripMenuItem.Text = "Поиск через кнопки";
-            this.ssToolStripMenuItem.Click += new System.EventHandler(this.ssToolStripMenuItem_Click);
+            this.документацияToolStripMenuItem.Name = "документацияToolStripMenuItem";
+            this.документацияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.документацияToolStripMenuItem.Text = "Документация";
+            this.документацияToolStripMenuItem.Click += new System.EventHandler(this.документацияToolStripMenuItem_Click);
+            // 
+            // обПрограммеToolStripMenuItem
+            // 
+            this.обПрограммеToolStripMenuItem.Name = "обПрограммеToolStripMenuItem";
+            this.обПрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.обПрограммеToolStripMenuItem.Text = "Об программе";
+            this.обПрограммеToolStripMenuItem.Click += new System.EventHandler(this.обПрограммеToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -207,7 +232,7 @@ namespace graphWF
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Graph";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.menuStrip1.ResumeLayout(false);
@@ -235,6 +260,9 @@ namespace graphWF
         private System.Windows.Forms.ToolStripMenuItem выйтиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ssToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem инфоToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem документацияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem обПрограммеToolStripMenuItem;
     }
 }
 
