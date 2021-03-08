@@ -16,6 +16,7 @@ namespace graphWF.windows
         public string value = "DEF";
         public string Text = "NONE";
         public string default_rich = "";
+        public int maxlen = 3;
         Random rand = new Random();
 
         public string type = "string";
@@ -51,6 +52,8 @@ namespace graphWF.windows
                 default_rich = rand.Next(0, 1000).ToString();
                 richTextBox1.MaxLength = 16;
             }
+
+            richTextBox1.MaxLength = maxlen;
 
             richTextBox1.Text = default_rich;
 

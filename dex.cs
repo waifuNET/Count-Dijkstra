@@ -59,6 +59,16 @@ namespace graphWF
             return false;
         }
 
+        public int getEdgeIndex(string ver, List<Edge> edges)
+        {
+            for(int i = 0; i < edges.Count; i++)
+            {
+                if (edges[i].vertex.name == ver)
+                    return i;
+            }
+            return -1;
+        }
+
         public void addEdge(string ver1, string ver2, int price, Label labelPrice = null)
         {
             for (int i = 0; i < graph.Count; i++)
@@ -69,6 +79,16 @@ namespace graphWF
                     {
                         if (graph[j].name == ver2)
                         {
+                            if(getEdgeIndex(ver1, graph[j].edges) != -1)
+                            {
+                                int vid = getEdgeIndex(ver2, graph[i].edges);
+                                if (getEdgeIndex(ver2, graph[i].edges) != -1)
+                                {
+                                    graph[j].edges.RemoveAt(getEdgeIndex(ver1, graph[j].edges));
+                                }
+                                graph[i].edges.RemoveAt(vid);
+                            }
+
                             graph[i].edges.Add(new Edge { vertex = graph[j], price = price, labelPrice = labelPrice });
                             graph[j].edges.Add(new Edge { vertex = graph[i], price = price, labelPrice = labelPrice });
                         }
@@ -100,6 +120,16 @@ namespace graphWF
                     return graph[i];
             }
             return null;
+        }
+
+        public int VertexByNameId(string name)
+        {
+            for (int i = 0; i < graph.Count; i++)
+            {
+                if (graph[i].name == name)
+                    return i;
+            }
+            return -1;
         }
 
         public void mathVertexPrice(string v1, string v2)

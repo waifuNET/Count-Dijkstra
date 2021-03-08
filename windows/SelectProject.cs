@@ -92,5 +92,14 @@ namespace graphWF.windows
                 LoadFile();
             }
         }
+
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            if (index != -1)
+            {
+                SaveLoad.Load(saves[index]);
+                this.Close();
+            }
+        }
     }
 }

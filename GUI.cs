@@ -177,6 +177,7 @@ namespace graphWF
                                 using (dialoge form = new dialoge())
                                 {
                                     form.type = "int";
+                                    form.maxlen = 9;
                                     form.default_rich = ((int)Math.Sqrt(Math.Pow(GDEXControl.GetVertex(Temp.ver2).button.Location.X - GDEXControl.GetVertex(Temp.ver1).button.Location.X, 2) + Math.Pow(GDEXControl.GetVertex(Temp.ver2).button.Location.Y - GDEXControl.GetVertex(Temp.ver1).button.Location.Y, 2)) / 4).ToString();
                                     form.Text = "Введите цену ребра " + Temp.ver1 + " => " + Temp.ver2;
                                     DialogResult result = form.ShowDialog();
